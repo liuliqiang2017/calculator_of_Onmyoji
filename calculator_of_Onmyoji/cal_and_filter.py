@@ -5,6 +5,7 @@ import sys
 
 from calculator_of_Onmyoji import data_format
 
+# 优化开关，可简单开启或者关闭
 OPTIMIZE = True
 
 def filter_loc_and_type(data_dict,
