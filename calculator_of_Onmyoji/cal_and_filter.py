@@ -426,5 +426,10 @@ def print_cal_rate(calculated_count, total_comb, printed_rate, rate=5):
 
     return printed_rate
 
+# 优化导入代码，自动判断导入64位或者32位动态链接库
 if OPTIMIZE:
-    from calculator_of_Onmyoji.cal_n_filter import fit_mitama_type, fit_prop_value, cal_mitama_comb_prop
+    is_64bits = sys.maxsize > 2**32
+    if is_64bits:
+        from calculator_of_Onmyoji.cal_n_filter64 import fit_mitama_type, fit_prop_value, cal_mitama_comb_prop
+    else:
+        from calculator_of_Onmyoji.cal_n_filter32 import fit_mitama_type, fit_prop_value, cal_mitama_comb_prop
