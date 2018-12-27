@@ -5,6 +5,7 @@ import sys
 
 from calculator_of_Onmyoji import data_format
 
+OPTIMIZE = True
 
 def filter_loc_and_type(data_dict,
                         l2_prop_limit,
@@ -423,3 +424,6 @@ def print_cal_rate(calculated_count, total_comb, printed_rate, rate=5):
         return cal_rate
 
     return printed_rate
+
+if OPTIMIZE:
+    from calculator_of_Onmyoji.cal_n_filter import fit_mitama_type, fit_prop_value, cal_mitama_comb_prop
