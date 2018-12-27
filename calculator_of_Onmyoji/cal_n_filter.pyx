@@ -1,4 +1,4 @@
-"由cython优化的源代码"
+"由cython优化的源代码，可自行打包成pyd，so文件"
 # coding: utf-8
 import itertools
 import sys
